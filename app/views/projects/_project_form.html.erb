@@ -1,6 +1,6 @@
 <%= form_for project, remote: true, authenticity_token: true do |f| %>
-  <%= f.label :project_name %>:
-  <%= f.text_area :name, class: "form-control", data: {textarea: "name"} %>
+  <%= f.label :project_name %>
+  <%= f.text_field :name, class: "form-control", data: {textarea: "name"} %>
 
   <%= f.submit "send", data: {send: "name"} %>
 <% end %>

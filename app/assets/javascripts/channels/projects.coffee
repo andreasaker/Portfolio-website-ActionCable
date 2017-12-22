@@ -8,7 +8,7 @@ App.projects = App.cable.subscriptions.create "ProjectsChannel",
   received: (data) ->
     # Called when there's incoming data on the websocket for this channel
     if data.destroy
-      $('#pro_'+data.id).hide()
+      $('#pro_'+data.id).remove()
     else
       $('#projects').append @renderProject(data)
 

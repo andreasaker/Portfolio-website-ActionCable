@@ -1,0 +1,8 @@
+<% projects.each do |p| %>
+  <p id="pro_<%=p.id%>">
+    <b><%= p.name %></b>
+    <%= link_to 'Show', p %>
+    <%= link_to 'Edit', edit_project_path(p) %>
+    <%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </p>
+<% end %>

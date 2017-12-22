@@ -55,13 +55,10 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1.json
   def destroy
     ProjectJob.perform_later(@project, true)
-    
+
     @project.destroy
 
-    respond_to do |format|
-      format.html { redirect_to root_url, notice: 'Project was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    head :no_content
   end
 
 
