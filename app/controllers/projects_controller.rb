@@ -54,7 +54,7 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
-    ProjectJob.perform_later(@project, true)
+    ProjectJob.perform_now(@project, true)
 
     @project.destroy
 
