@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  
+
+
   def index
   	@users = User.all
   end
@@ -12,6 +13,7 @@ class UsersController < ApplicationController
   	flash[:success] = "User created successfully!"
   	@user = User.new(user_params)
   	if @user.save
+      log_in @user
   		redirect_to users_path
   	else
   		render 'new'
