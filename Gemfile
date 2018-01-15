@@ -32,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 
 gem 'rails-controller-testing'
+
+gem 'bootstrap', '~> 4.0.0.beta3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

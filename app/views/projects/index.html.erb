@@ -1,20 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Projects</h1>
 
-
-<div id="projects">
-<% if @projects.any? %>
-  <%= render partial: "projects/projects", locals: {projects: @projects} %>
-<% end %>
-
+<div class="container">
+  <div class="row">
+  	<div class="d-none d-lg-block col-sm">
+  		<h1>Portfolio</h1>
+		<h5>Andreas Åker</h5>
+	</div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+    	<% if @projects.any? %>
+  			<%= render partial: "projects/projects", locals: {projects: @projects} %>
+		<% end %>
+    </div>
+  </div>
 </div>
 
 
-<br>
+<div id="projects">
 
-<%= link_to 'New Project', new_project_path %>
-
+</div>
 
 <% if logged_in? %>
 	<%= render partial: "projects/project_form", locals: {project: @project} %>
