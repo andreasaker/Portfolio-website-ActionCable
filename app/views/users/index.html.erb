@@ -2,7 +2,7 @@
 <% @users.each do |u| %>
 	<li>
 		<%= "#{u.name} #{u.email}"%> | 
-		<% if current_user.admin? && !current_user?(user) %>
+		<% if current_user.admin? && !current_user?(u) %>
 			<%= link_to "Delete", u, method: :delete, data: {confirm: "You sure?"} %>
 		<% end %>
 	</li>
