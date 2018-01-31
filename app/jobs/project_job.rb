@@ -5,6 +5,8 @@ class ProjectJob < ApplicationJob
     ActionCable.server.broadcast 'projects',
       id: project.id,
       name: project.name,
+      desc: project.desc,
+      url: project.url,
       destroy: removed
     
   end

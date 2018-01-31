@@ -3,16 +3,19 @@
 
 <div class="container">
   <div class="row">
-  	<div class="d-none d-lg-block col-sm">
-  		<h1>Portfolio</h1>
-		<h5>Andreas Åker</h5>
-	</div>
+  	<div class="col-sm">
+  	 <h3>Hi, my name is Andreas Åker 	</h3>
+     <p>Junior web developer</p>
+     <h5>Tools i use the most</h5>
+     <p>Ruby, Rails, JS, Jquery, HTML, CSS, Sass</p>
+	  </div>
   </div>
   <div class="row">
-    <div class="col-sm">
+    <div class="col-sm" id="projects">
+    <h5>Projects:</h5>
     	<% if @projects.any? %>
   			<%= render partial: "projects/projects", locals: {projects: @projects} %>
-		<% end %>
+		  <% end %>
     </div>
   </div>
 </div>

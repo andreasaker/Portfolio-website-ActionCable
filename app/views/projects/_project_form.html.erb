@@ -2,5 +2,11 @@
   <%= f.label :project_name %>
   <%= f.text_field :name, class: "form-control", data: {textarea: "name"} %>
 
-  <%= f.submit "send", data: {send: "name"} %>
+  <%= f.label :project_url %>
+  <%= f.text_field :url, class: "form-control", data: {textarea: "url"} %>
+
+  <%= f.label :project_desc %>
+  <%= f.text_area :desc, class: "form-control", data: {textarea: "desc"} %>
+
+  <%= f.submit "send", data: {send: "name, url, desc"} %>
 <% end %>
