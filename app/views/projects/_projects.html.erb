@@ -3,8 +3,7 @@
     <b><%= p.name %></b><br />
     <%= p.desc %><br />
     <%= link_to "Go to website", p.url %>
-    <%= link_to 'Show', p %>
-    <%= link_to 'Edit', edit_project_path(p) %>
+     | <%= link_to 'Edit', edit_project_path(p) %>
     <%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' } %>
   </p>
 <% end %>

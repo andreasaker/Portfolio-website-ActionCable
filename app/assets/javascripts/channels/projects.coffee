@@ -16,4 +16,4 @@ App.projects = App.cable.subscriptions.create "ProjectsChannel",
       $('.row #projects').append @renderProject(data)
 
   renderProject: (data) ->
-    '<p id="pro_'+data.id+'"><b>' + data.name + '</b><br />' + data.desc + '<br /><a href="'+data.url+'">Go to website</a> <a href="/projects/'+data.id+'/show">Show</a> <a href="/projects/'+data.id+'/edit">Edit</a> <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/projects/'+data.id+'">Destroy</a></p>'
+    '<p id="pro_'+data.id+'"><b>' + data.name + '</b><br />' + data.desc + '<br /><a href="'+data.url+'">Go to website</a> | <a href="/projects/'+data.id+'/edit">Edit</a> <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/projects/'+data.id+'">Destroy</a></p>'
