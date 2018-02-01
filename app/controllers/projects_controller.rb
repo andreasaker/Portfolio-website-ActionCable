@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-
+  before_action :logged_in_user, only:[:new, :create, :edit, :update, :destroy]
   # GET /projects
   # GET /projects.json
   def index
@@ -64,6 +64,13 @@ class ProjectsController < ApplicationController
 
 
   private
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "Please log in first"
+        redirect_to login_url
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])

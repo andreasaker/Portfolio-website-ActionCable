@@ -1,11 +1,12 @@
+
 <%= form_for project, remote: true, authenticity_token: true do |f| %>
-  <%= f.label :project_name %>
+  <%= f.label :project_name, "Project name:" %>
   <%= f.text_field :name, class: "form-control", data: {textarea: "name"} %>
 
-  <%= f.label :project_url %>
+  <%= f.label :project_url, "Url: (ex. http://www.example.com)" %>
   <%= f.text_field :url, class: "form-control", data: {textarea: "url"} %>
 
-  <%= f.label :project_desc %>
+  <%= f.label :project_desc, "Description" %>
   <%= f.text_area :desc, class: "form-control", data: {textarea: "desc"} %>
 
   <%= f.submit "send", data: {send: "name, url, desc"} %>

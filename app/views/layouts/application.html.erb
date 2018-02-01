@@ -20,19 +20,24 @@
     <% flash.each do |message_type, message| %>
         <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
     <% end %>
+    
     <%= yield %>
     
-    
-    <div id="foot">
-    <% if logged_in? %>
-      <%= current_user.name %>
-      <%= link_to "Profile", user_path(current_user) %>
-      <%= link_to "Users", users_path() %>
-      <%= link_to "Log out", logout_path, method: :delete %>
-    <% else %>
-      <%= link_to "Log in", login_path %>
-    <% end %>
+    <%  debug(params) if Rails.env.development? %>
+
+    <footer class="footer">
+    <div class="container">
+      <% if logged_in? %>
+        <%= current_user.name %>
+        <%= link_to "Home", root_path() %>
+        <%= link_to "Profile", user_path(current_user) %>
+        <%= link_to "Users", users_path() %>
+        <%= link_to "Log out", logout_path, method: :delete %>
+      <% else %>
+        <%= link_to "Log in", login_path %>
+      <% end %>
     </div>
-    <%= debug(params) if Rails.env.development? %>
+    </footer>
+
   </body>
 </html>

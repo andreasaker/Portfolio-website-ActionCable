@@ -1,9 +1,11 @@
 <% projects.each do |p| %>
-  <p id="pro_<%=p.id%>">
-    <b><%= p.name %></b><br />
-    <%= p.desc %><br />
+  <div id="pro_<%=p.id%>" class="project">
+    <b><%= p.name %></b>
+    <%= simple_format(p.desc) %>
     <%= link_to "Go to website", p.url %>
+    <% if logged_in? %>
      | <%= link_to 'Edit', edit_project_path(p) %>
     <%= link_to 'Destroy', p, method: :delete, data: { confirm: 'Are you sure?' } %>
-  </p>
+    <% end %>
+  </div>
 <% end %>
