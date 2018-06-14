@@ -1,24 +1,6 @@
-# README
+Simple portfolio website.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Built with Ruby on Rails 5.1.4 
 
-Things you may want to cover:
+Real-time updates with Action Cable.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
